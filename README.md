@@ -1,3 +1,24 @@
+#PROYECTO INTEGRADOR MOD. II: RICK AND MORTY
+
+En este proyecto web implementé todos los temas aprendidos en el módulo, 
+más algunos "extras", como: 
+* el botón MOSTRAR para ver la contraseña,
+* el CONTADOR de tarjetas de la Home,
+* el TEXTO que aparece en la Home cuando no hay tarjetas,
+* y las animaciones CSS.
+
+  TEMAS abordados en el módulo desarrollados aquí:
+  - React :
+      + Estados, LifeCycles,
+      + Rooting,
+      + Forms,
+      + Hooks,
+  - React + Redux,
+  - CSS y Estilos React.
+
+***************************************************************************
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
