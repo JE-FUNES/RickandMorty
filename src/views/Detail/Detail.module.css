@@ -1,0 +1,124 @@
+.contenedorGral {   /*contiene a H1 y a contenedorTarjetaImagen*/
+    position: relative;
+    z-index: 10;
+    display: inline-block;
+    width: 65%;
+    height: 600px;
+    background-color: rgba(95, 13, 103, 0.5); 
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(146, 77, 146, 0.2);
+    margin: 110px 0;
+    padding: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    background-size: 40px 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedorTarjetaImagen { /* contiene a contenedorTarjeta y cotenedor Imagen*/
+margin: 10px;
+padding: 5px;
+display: flex;
+}
+
+.contenedorTarjeta { /* contiene a tarjeta*/
+    height: 100vh;
+    width: 100vh;
+    display: inline-block;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    margin: 2px 0 0 50px;
+}
+
+.contenedorImagen img {
+    height: 55vh;
+    width: 55vh;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 2px 50px 0 0;
+    position: relative;
+    z-index: 1000;
+    /*height: 310px;*/
+    box-shadow: 16px 14px 20px black;
+    /*justify-content: space-around;*/
+    align-items: center;
+}
+.tarjeta { /* contiene a contenedorTexto*/
+    height: 50vh; /*fit-content*/
+    width: 50vh;
+    background-color: rgb(84, 11, 92); 
+    border-radius: 10%;
+    box-shadow: 16px 14px 20px black;
+    position: relative;
+    overflow: hidden;
+    display: flex; /*inline-block*/
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0 0 -10px;
+
+
+}
+
+.tarjeta::before {
+    content: "";
+    position: absolute;
+    height: 65vh;
+    width: 65vh;
+    background-image: conic-gradient(rgb(10, 225, 35) 20deg, transparent 120deg);
+    animation: rotar 2s linear infinite;
+}
+
+
+.contenedorTexto { /* info importada*/
+    text-align: left;
+    top: 10%;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    /*background-size: 40px 40px;*/
+    padding: 0;
+    display: inline-block; /*inline-block*/
+    
+    border-radius: 10%;
+    margin: 0;
+    
+    height: 45vh;
+    width: 40vh;
+    
+    color: #faf9fa;
+    z-index: 1000;
+    font-size: 1rem;
+
+}
+
+
+.tarjeta:after{
+    content: "";
+    position: absolute;
+    height: 49vh;
+    width: 49vh;
+    background-color: rgb(84, 11, 92);
+    /*z-index: 14;*/
+    border-radius: 10%;
+}
+
+@keyframes rotar {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+.contenedorGral h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin: 10px 0 10px 0;
+    color: #fff;
+    text-shadow: 0 0 10px #ea05cf, 0 0 20px #e80be8, 0 0 15px #b01c9e, 0 0 5px #ea05d7;
+    z-index: 1000;
+}
+
+
