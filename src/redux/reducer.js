@@ -17,7 +17,8 @@ export default function reducer (state = initialState, action) { // el destructu
         case REMOVE_FAV:
             return {
                 ...state,
-                myFavorites: state.myFavorites.filter(fav => fav.id !== action.payload)
+                myFavorites: state.myFavorites.filter(fav => fav.id !== action.payload),
+                allCharactersFav: state.allCharactersFav.filter(fav => fav.id !== action.payload)
                 
             }
 
