@@ -1,7 +1,7 @@
 # RickandMorty
 
 
-<img src=./pi_jefunes_rickandmorty_final/proyecto.jpg alt= "proyecto" />
+<img src=./proyecto.jpg alt= "proyecto" />
 
 <h1> Proyecto Integrador Henry: </h1>
 
