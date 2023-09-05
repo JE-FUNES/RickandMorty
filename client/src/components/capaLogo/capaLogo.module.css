@@ -1,0 +1,51 @@
+
+.box {
+    width: 100px;
+    background-color: rgba(95, 13, 103, 0.5);
+    z-index: 10;
+    height: 100%;
+    position: fixed;
+    /*justify-content: normal;
+    display: flex;
+    overflow: hidden;*/
+    padding: 0 20px 0 0;
+    
+}
+
+.image {
+    width: 150px;
+    height: 150px;
+    padding: 0 0 0 0;
+    border: none;
+    background-image: url('./rick_morty.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    
+}
+
+.text {
+    padding: 0 0 0 0;
+    writing-mode: vertical-lr;
+    z-index: 15;
+    border: none;
+    overflow: hidden;
+    height: 70%;
+    
+    
+}
+
+.text h1 {
+    color: rgb(239, 225, 179);
+/*text-align: center;
+text-justify: auto ;*/
+font-size: 3rem;
+}
+
+.firma h3 {
+    font-family: 'Roboto Condensed', sans-serif;
+    color: rgb(122, 181, 92);
+/*text-align: center;
+text-justify: auto ;*/
+font-size: 1rem;
+}

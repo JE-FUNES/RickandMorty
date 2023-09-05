@@ -1,0 +1,68 @@
+.SearchBar {
+    align-items: baseline;
+    display: inline-block;
+    justify-content: space-around;
+    padding: 0 ;
+    margin: 5px;
+}
+
+.inputS {
+    text-decoration: none;
+    background: linear-gradient(-90deg, grey 0%, white 64%);
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 50;
+    border-radius: 80px 0 0 20px; /* bordes redondeados */
+    transition: all 0.3s ease;
+    cursor: text;
+    z-index: 200;
+    width: 250px;
+    height: 50px;
+    padding: 0 0 0 20px; /* es espacio dentro de la caja*/
+    margin: 0;
+    box-shadow: 1px 3px 2px 1px magenta
+
+}
+
+.buttonS {
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 100;
+    border-radius: 0 80px 20px 0; ; /* Ajustado */
+    transition: all 0.3s ease;
+    cursor: pointer;
+    z-index: 200;
+    height: 50px;
+    padding: 0;
+    background: linear-gradient(90deg, grey 0%, white 74%);
+    margin: 0;
+    width: 50px;
+    box-shadow: 1px 3px 2px 1px magenta
+    /*position: relative; 
+    align-items: top;*/
+}
+.buttonS:hover {
+    color: white;
+    background-color: black;
+    box-shadow: 1px 3px 2px 1px white;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    transition: 1s ease;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    align-items: center;
+}
+li {
+    display: flex;
+    justify-content: space-around;
+    display: inline-block;
+}
+
+

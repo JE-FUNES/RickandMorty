@@ -1,0 +1,100 @@
+.contenedorForm {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    width: 55%;
+    height: fit-content;
+    
+
+    background-color: rgba(95, 13, 103, 0.5); 
+    border-radius: 40px 160px;
+    box-shadow: 0 0 10px #ea05cf, 0 0 20px #e80be8, 0 0 15px #b01c9e, 0 0 5px #ea05d7;
+    margin: 15px 0;
+    padding: 0 4px 0 4px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    background-size: 40px 40px;
+   
+}
+
+.contenedorInput {
+    position: relative;
+    text-align: left;
+    top: 10%;
+    z-index: 1;
+    display: inline-block;
+    width: 300px;
+    height: fit-content;
+    background-color: rgba(219, 210, 220, 0.5); 
+    border-radius: 80px 20px;
+    box-shadow: 0 0 10px #6ef179, 0 0 20px #55b062, 0 0 15px #1cb032, 0 0 5px #0a8c0a;
+    margin: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    background-size: 40px 40px;
+    padding: 5px 25px 5px 25px;
+    text-align: center;
+}
+
+.contenedorInput input {
+    width: 100%;
+    padding: 0 0 0 9px;
+    height: 30px;
+    border-radius: 80px 20px;
+    
+}
+
+.texto {
+    text-align: center;
+    font-size: 1rem;
+    margin: 2rem 0;
+    color: #fff;
+    z-index: 1000;
+}
+
+.tituloForm h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin: 0 0 5px 0;
+    color: #fff;
+    text-shadow: 0 0 10px #0d6505, 0 0 20px #6ce142, 0 0 15px #07f31a, 0 0 5px #1ef906;
+    z-index: 1000;
+}
+
+.botonSubmit {
+    width: 50%;
+    background-color: #a645b5;
+    background-image: linear-gradient(315deg, #c966aa 0%, #0dd366 74%);
+    border: none;
+    z-index: 1;
+    position: relative; /* Añadido */
+    border-radius: 80px 20px; /* Ajustado */
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: rgb(135, 9, 133);
+    font-weight: 600;
+    padding: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin: 6px 0 0 0;
+    box-shadow: 0 0 5px #ea05cf, 0 0 10px #e80be8, 0 0 10px #b01c9e, 0 0 5px #ea05d7;
+}
+
+.error {
+    font-size: smaller;
+}
+
+.mostrar {
+    color: rgb(3, 56, 15);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.textoLogin {
+    color: black;
+    font-size: 1rem ;
+    font-weight: 600;
+}

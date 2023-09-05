@@ -1,0 +1,124 @@
+.about { 
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    width: 80%;
+    height: fit-content;
+    background-color: rgba(95, 13, 103, 0.5); 
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(146, 77, 146, 0.2);
+    margin: 150px 0 0 30px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    background-size: 40px 40px;
+}
+
+h1 {
+    display: grid;
+    place-content: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /*text-align: left;*/
+    font-size: 4rem;
+    margin: 7rem 0;
+    z-index: 1000;
+    letter-spacing: -.06em ;
+    line-height: 3.1rem;
+    font-weight: 800;
+    color: white;
+    
+}
+
+.quieres {
+background: linear-gradient(90deg, #F5BE24, #8D24F5, #F5BE24);
+background-size: 400%;
+-webkit-text-fill-color: transparent;
+-webkit-background-clip: text;
+animation: animate 10s linear infinite;
+}
+
+
+.saber {
+background: linear-gradient(90deg, #8D24F5, #E424F5, #8D24F5 );
+background-size: 500%;
+-webkit-text-fill-color: transparent;
+-webkit-background-clip: text;
+animation: animate 10s linear infinite;
+}
+
+
+.demi {
+background: linear-gradient(90deg, #24F549, #24B2F5, #24F549 );
+background-size: 500%;
+-webkit-text-fill-color: transparent;
+-webkit-background-clip: text;
+animation: animate 10s linear infinite;
+}
+
+
+@keyframes animate {
+    0% {
+        background-position: 0%;
+    }
+    50% {
+        background-position: 200%;
+    }
+    100% {
+        background-position: 400%;
+    }
+}
+
+
+
+.ok {
+    margin: -25px 0 0 25px;
+}
+.about h3 {
+    text-align: left;
+    font-size: 1.2rem;
+    
+    color: #fff;
+    text-shadow: 2px 2px 4px #46bc17;
+    z-index: 1000  ;
+    text-align: left;
+    margin: 29px 0 0 50px;
+}
+.about img {
+    z-index: 1000;
+    width: 400px;
+    margin: -180px -500px 10px 0;
+    box-shadow: 0 0 10px #ea05cf, 0 0 20px #e80be8, 0 0 15px #b01c9e, 0 0 5px #ea05d7;
+    
+}
+
+.jefa {
+    margin: 0 0 0 25px;
+}
+
+.pregunta {
+
+}
+
+.opciones {
+
+}
+.about h2 {
+    text-align: left;
+    font-size: 2rem;
+    
+    color: #fff5ff;
+    text-shadow: 2px 2px 4px #a9c0a0;
+    z-index: 1000;
+}
+
+
+
+.about p {
+    text-align: left;
+    font-size: 1.2rem;
+    margin: 2rem 0;
+    color: #fff;
+    z-index: 1000;
+}
+
+
