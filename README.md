@@ -1,6 +1,5 @@
-<<<<<<< HEAD
 # RickandMorty
-![Alt text](image.png)
+![proyecto](./pi_jefunes_rickandmorty_final/proyecto.jpg)
 
 
 
