@@ -12,6 +12,7 @@ import CapaLogo from './components/capaLogo/capaLogo';
 import About2 from './views/About/About2.jsx';
 import Favorites from './views/favorites/Favorites';
 
+
 /* pásale la función login que creaste en el ejercicio anterior al componente Form mediante props */
 
 function App() {
@@ -20,21 +21,22 @@ function App() {
    let [counter, setCounter] = useState(0);
    const location = useLocation();
    let [access, setAccess] = useState(false);
-   const email = 'infoventacba@gmail.com';
-   const password = '123456';
    const navigate = useNavigate();
 
    
-   function login(user) {
-      if (user.email === email && user.password === password) {
-         setAccess(true);
-         navigate('/home');
-      }
+   function login(userData) {
+      const { email, password } = userData;
+      const URL = 'http://localhost:3001/rickandmorty/login/';
+      axios(URL + `?email=${email}&password=${password}`).then(({ data }) => {
+         const { access } = data;
+         setAccess(data);
+         access && navigate('/home');
+      });
    }
    
    useEffect(() => {
       !access && navigate('/');
-   }, [access, navigate]);
+   }, [access]);
 
    function logOut() {
       setAccess(false);

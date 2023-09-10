@@ -8,8 +8,17 @@ import {useState, useEffect} from 'react';
 
 
 
-function Card({name, status, species, gender, image, onClose, origin, id, myFavorites, addFav, removeFav}) {
-   //console.log(myFavorites);
+function Card({id, name, status, species, gender, origin, image, onClose, removeFav, addFav, myFavorites}) {
+   
+   console.log(myFavorites);
+  useEffect(() => {
+      myFavorites?.forEach((fav) => {
+         if (fav.id == id) {
+            setIsFav(true);
+         }
+      });
+   }, [myFavorites]);
+   
    const navigate = useNavigate();
    const [isFav, setIsFav] = useState(false);
    const location = useLocation();
@@ -19,14 +28,6 @@ function Card({name, status, species, gender, image, onClose, origin, id, myFavo
       navigate(`/detail/${id}`);
    }
 
-   useEffect(() => {
-   
-      myFavorites.forEach((fav) => {
-         if (fav.id === id) {
-            setIsFav(true);
-         }
-      });
-   }, [myFavorites]);
 
 
    function handleFavorite() {
@@ -70,10 +71,10 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
    return {
-      addFav: (character) => {dispatch(addFav(character))},
-      removeFav: 
+      addFav: (character) => dispatch(addFav(character)),
+      removeFav: (id) => dispatch(removeFav(id)),
       //el 1er removeFav es el que recibo por props
-      (id) => {dispatch(removeFav(id))},
+      
       // este ultimo removeFav que se despacha es el que importe
       //tanto addFavorite como removeFavorite son funciones que se van a ejecutar cuando se dispare el evento onClick
       // y las traigo de actions.js 
@@ -81,8 +82,7 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 
-export default connect(
-   mapStateToProps, mapDispatchToProps)(Card); 
+export default connect(mapStateToProps, mapDispatchToProps)(Card); 
 
 {//siempre primero va mapStateToProps y luego mapDispatchToProps. Card es el componente que se va a conectar con el store
 // el connect recibe mapStateToProps y mapDispatchToProps, y luego recibe el componente que se va a conectar con el store

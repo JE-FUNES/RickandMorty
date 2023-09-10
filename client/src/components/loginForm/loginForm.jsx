@@ -100,7 +100,7 @@ function LoginForm({login})  {
                 <input 
                 type={shown ? "text" : "password"} 
                 name="password" 
-                placeholder="Tu-clave123"
+                placeholder="Tu-clave123"                                                                   
                 value={user.password} /*user.password*/ 
                 onChange={handleChange}
                 onChangePass={onChangePass}

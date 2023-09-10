@@ -1,4 +1,5 @@
 import { connect, useDispatch } from "react-redux";
+import {useEffect, useState} from "react";
 import Styles from "./favorites.module.css";
 import { filterCards, orderCards } from "../../redux/actions";
 import Card from "../../components/Card/Card";
@@ -6,7 +7,12 @@ import Card from "../../components/Card/Card";
 
 function Favorites({myFavorites}) {
     const dispatch = useDispatch();
-
+    /* prueba */
+    const [character, setCharacter] = useState([])
+    useEffect(()=>{
+        setCharacter(myFavorites)
+    },[myFavorites])
+    /* fin prueba */
     const handleOrder = (event) => {
 dispatch(orderCards(event.target.value));
     }
@@ -38,7 +44,7 @@ dispatch(orderCards(event.target.value));
             </div>
 
             {
-                myFavorites?.map((fav) => {
+                character?.map((fav) => {
                     return (
                         < Card
                         key={fav.id}
