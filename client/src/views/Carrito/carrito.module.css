@@ -1,40 +1,28 @@
-.fav {
-    margin: 120px 0 0 150px;
+.carr {
+    margin: 300px 0 0 150px;
     position: relative;
     z-index: 1;
     width: 90%;
 }
-    
+
 .portada {
     margin: 5px;
-    position: static; 
+    position: static;   
 }
 
-h1 {
-    margin: 0 0 15px 40px;
+.carritoTitle {
+    margin: 0 0 10px 550px;
     color: red;
-}
-
-.favoriteTitle {
     display: flex; /* Usar flexbox para elementos en línea */
     align-items: center; /* Alinear elementos verticalmente al centro */
   }
-
-.favoriteCount {
+  
+.carritoCount {
     color: chartreuse;
     margin: 0 0 0 10px;
     align-items: center;
 }
 
-       
-select {
-    background-color: brown;
-    color: wheat;
-    font-size: medium;
-}
 
-label {
-    color: white;
-    font-size: medium;
-    margin: 0 5px 0 50px;
-}
+
+       

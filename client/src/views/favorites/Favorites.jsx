@@ -6,25 +6,38 @@ import Card from "../../components/Card/Card";
 
 
 function Favorites({myFavorites}) {
+
+const [favoriteCount, setfavoriteCount] = useState(0);
+
     const dispatch = useDispatch();
     /* prueba */
-    const [character, setCharacter] = useState([])
+    // const [character, setCharacter] = useState([])
+    
     useEffect(()=>{
-        setCharacter(myFavorites)
+      setfavoriteCount(myFavorites.length);
     },[myFavorites])
     /* fin prueba */
+
     const handleOrder = (event) => {
 dispatch(orderCards(event.target.value));
     }
 
     const handleFilter = (event) => {
-    dispatch(filterCards(event.target.value));
+        const selectedGender = event.target.value;
+
+        if (selectedGender === "all") {
+            dispatch(filterCards("all"));
+    } else {
+        dispatch(filterCards(selectedGender));
     }
+}
    
     return (
         <div className={Styles.fav}>
             <div className={Styles.portada} >
-            <h1>Tus Favoritos</h1>
+            <h1 className={Styles.favoriteTitle}>
+          Tus Favoritos:  <span className={Styles.favoriteCount}> { favoriteCount}</span>
+        </h1>
             <label>A - Z:</label>
             <select onChange={handleOrder} >
                 
@@ -35,6 +48,7 @@ dispatch(orderCards(event.target.value));
             <label>GÉNERO:</label>
             <select onChange={handleFilter} >
             
+                <option value="all">All Favorites</option>
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
                 <option value="Genderless">Genderless</option>
@@ -44,7 +58,7 @@ dispatch(orderCards(event.target.value));
             </div>
 
             {
-                character?.map((fav) => {
+                myFavorites.map((fav) => {
                     return (
                         < Card
                         key={fav.id}
@@ -55,7 +69,7 @@ dispatch(orderCards(event.target.value));
                         image={fav.image}
                         status={fav.status}
                         origin={fav.origin}
-                        OnClose={fav.onClose}
+                        onClose={fav.onClose}
                         />
                     )
                 })

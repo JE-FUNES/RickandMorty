@@ -9,8 +9,8 @@ import Detail from './views/Detail/Detail';
 import Error from './views/Error/Error.jsx';
 import LandingPage from './views/landingPage/landingPage';
 import CapaLogo from './components/capaLogo/capaLogo';
-import About2 from './views/About/About2.jsx';
 import Favorites from './views/favorites/Favorites';
+import Carrito from './views/Carrito/Carrito';
 
 
 /* pásale la función login que creaste en el ejercicio anterior al componente Form mediante props */
@@ -77,17 +77,23 @@ function onClose(id) {
    setCounter(counter - 1);
    }
       
+   function handleCloseAll(){
+      setCharacters([]);
+      setCounter(0);
+   }
    
 
    return (
       <div className='App'>
-         <CapaLogo />
          {location.pathname !== '/' && <Nav 
          className='nav' 
          onSearch={onSearch}
          counter={counter} 
          logOut={logOut}
+         handleCloseAll={handleCloseAll}
          />}
+         {location.pathname !== '/' &&
+         <CapaLogo />}
          
       <Routes>
         <Route path='/' element={<LandingPage login={login} />} />
@@ -95,8 +101,8 @@ function onClose(id) {
          <Route path='/favorites' element={<Favorites />} />
          <Route path='/home' element={<Cards characters={characters} onClose={onClose} />} />
          <Route path='/detail/:id' element={<Detail />} />
+         <Route path='/carrito' element={<Carrito />} />
          <Route path='/404' element={<Error />} />
-         <Route path='/about2' element={<About2 />} />
          <Route path='*' element={<Navigate to='/404' />} />
       </Routes>
       <div className='space'></div>

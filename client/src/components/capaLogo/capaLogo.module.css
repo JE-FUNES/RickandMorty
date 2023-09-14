@@ -13,16 +13,18 @@
 }
 
 .image {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 120px;
     padding: 0 0 0 0;
     border: none;
-    background-image: url('./rick_morty.png');
+    background-image: url('./rick-and-morty2.gif');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
-    
-}
+    margin: 0 0 0 10px;
+    }
+
+ 
 
 .text {
     padding: 0 0 0 0;
@@ -45,6 +47,7 @@ font-size: 3rem;
 .firma h3 {
     font-family: 'Roboto Condensed', sans-serif;
     color: rgb(122, 181, 92);
+    margin: 10px -18px 0 0;
 /*text-align: center;
 text-justify: auto ;*/
 font-size: 1rem;

@@ -20,6 +20,27 @@ Si hay un error debes responder con un status 500, y un texto con la propiedad m
 const getCharById = async (req, res) => {
   // haz una petición a la API a partir del id que recibes por Params.
   
+  try {
+    // Haz una petición a la API a partir del id que recibes por Params.
+    const { id } = req.params;
+    
+    const response = await axios.get(`${URL}${id}`);
+
+    if (response.status === 200) {
+      const { id, status, name, species, origin, image, gender } = response.data;
+      res.json({ id, status, name, species, origin, image, gender });
+    } else {
+      // Si la respuesta no es un código 200, puedes manejar el error de la manera que consideres apropiada.
+      res.status(response.status).send(response.statusText);
+    }
+  } catch (error) {
+    // Capturamos cualquier error que pueda ocurrir durante la petición o el procesamiento de la respuesta.
+    // Puedes enviar una respuesta de error adecuada en función del tipo de error que se produzca.
+    res.status(500).send('Not Found');
+  }
+
+  
+  /* MI CODIGO
   const { id } = req.params;
   await axios.get(`${URL}${id}`)
   .then (response => {
@@ -39,6 +60,7 @@ const getCharById = async (req, res) => {
   // .catch (error => {
   //   res.status(500).send(error.message);
   // })
+ */ 
 }
 
 module.exports = getCharById;

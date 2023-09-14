@@ -20,9 +20,12 @@ const Detail = () => {
         return setCharacter({});
      }, [id]);
 
+
     return (
         <div className={styles.contenedorGral}>
-            <h1>✨{character.name}✨</h1>
+            <h1>✨{character.name}✨
+           
+            </h1>
             <div className={styles.contenedorTarjetaImagen}>
                 <div className={styles.contenedorTarjeta}>
                     <div className={styles.tarjeta}>
@@ -45,4 +48,8 @@ const Detail = () => {
     )};
 
     
-export default Detail;
+ 
+     
+     
+     
+     export default Detail; 

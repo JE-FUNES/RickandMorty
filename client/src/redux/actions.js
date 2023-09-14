@@ -1,5 +1,5 @@
 
-import { ADD_FAV, REMOVE_FAV, FILTER, ORDER} from "./actionTypes.js";
+import { ADD_FAV, REMOVE_FAV, FILTER, ORDER, ADD_CARR, REMOVE_CARR} from "./actionTypes.js";
 import axios from "axios";
 
 // estas son las actions
@@ -14,6 +14,18 @@ export const addFav = (character) => {
        });
     };
  };
+
+ export const addCarr = (character) => {
+   const endpoint = 'http://localhost:3001/rickandmorty/carr';
+   return (dispatch) => {
+      axios.post(endpoint, character).then(({ data }) => {
+         return dispatch({
+            type: ADD_CARR,
+            payload: data,
+         });
+      });
+   };
+};
  
 
  export const removeFav = (id) => {
@@ -27,6 +39,18 @@ export const addFav = (character) => {
        });
     };
  };
+
+ export const removeCarr = (id) => {
+   const endpoint = 'http://localhost:3001/rickandmorty/carr/' + id;
+   return (dispatch) => {
+      axios.delete(endpoint).then(({ data }) => {
+         return dispatch({
+            type: REMOVE_CARR,
+            payload: data,
+      });
+      });
+   };
+};
 
 
 export const filterCards = (gender) =>  {

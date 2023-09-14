@@ -1,8 +1,11 @@
 import styles from "./About.module.css";
 import React from "react";
 import image from "../../img/foto julia.jpg"
+import CalcularEdad from "./CalcularEdad.jsx";
 
 const About = () => {
+
+        let miEdad = CalcularEdad("1975-05-10")
     
     return (
         <div className={styles.about}>
@@ -25,11 +28,12 @@ const About = () => {
                 <br />
                     aunque normalmente me llaman JULY💚
             </h3>
-            <h3>Soy DISEÑADORA GRÁFICA, 
+            <h3>🎨 Soy DISEÑADORA GRÁFICA, 
                 <br/> PUBLICISTA, y, muy importante:
-                <br/> futura WEB DEVELOPER ‼
+                <br/>🥇 futura WEB DEVELOPER ‼
             </h3>
             <br />
+            <p className={styles.Edad} >🕘 ... Hoy tengo exactamente: {miEdad} </p>
             <img src={image} alt="Una foto de mí" />
            
         </div>

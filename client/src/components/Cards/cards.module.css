@@ -1,26 +1,215 @@
 .cardcontainer {
-margin: 110px 10px 10px 160px;
+margin: 150px 10px 100px 120px;
+padding: 20px 0 0 0;
 }
 
 
-.container {
-
-    margin: 300px 0 0 0;
-}
-
-.txt {
-    font-family: sans-serif;
-    font-size: 50px;
-    font-weight: bold;
+/*.container {
+    align-items: center;
+    width: 94vw;
+    height: 1000px;
+    top: 50%;
+    left: 50%;
     
+    z-index: 10;
+    margin: -100px 0 0 -90px;
+    background-image: url('./giphy.gif');
+    background-repeat: no-repeat;
+     background-size: 1500px;
+    background-position: top;
+}*/
+
+.backgroundimage {
+background-image: url('./giphy.gif');
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+  width: 100%; /* Asegura que la imagen cubra todo el contenedor */
+  height: 100vh; /* Ajusta la altura según tus preferencias */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Coloca la imagen detrás de las cards */
+  opacity: 0.9; /* Ajusta la opacidad según tus preferencias */
+  transition: opacity 0.3s ease-in-out;
+}
+
+/*.cardcontainer span {
+    font-size: 50pt;
+    font-weight: bold;
+    position: relative;
+    font-family: "Fredoka One";
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+.cardcontainer span::before{
+    content: var(--l);
+    position: absolute;
+    transform: scale(1.1);
+    filter: blur(15px);
+}
+
+.cardcontainer span::after{
+    content: var(--l);
+    position: absolute;
+    top: 80%;
+    left: 0;
+    transform: rotateX(50deg);
+    filter: blur(30px);
+}
+
+.cardcontainer span:hover{
+filter: contrast(250%);
+}
+*/
+.Busca {
+    cursor: pointer;
+    font-size: 50pt;
+    font-weight: bold;
+    position: relative;
+    font-family: "Fredoka One";
+    transition: all 300ms ease-in-out;
+    color: transparent ;
+    -webkit-text-stroke: 1px white;
+    
+}
+
+
+.y{
+    cursor: pointer;
+    font-size: 30pt;
+    font-weight: bold;
+    position: relative;
+    font-family: "Fredoka One";
+    transition: all 300ms ease-in-out;
+    color: transparent ;
+    -webkit-text-stroke: 1px white;
+}
+
+
+.Divertite{
+    cursor: pointer;
+    font-size: 50pt;
+    font-weight: bold;
+    position: relative;
+    font-family: "Fredoka One";
+    transition: all 300ms ease-in-out;
+    color: transparent ;
+    -webkit-text-stroke: 1px white;
+    background-image: linear-gradient(to left, chartreuse, rgb(142, 34, 237), orange ,rgb(207, 30, 183), chartreuse);
+    background-clip: text;
+    animation: colors 3s linear infinite;
+    background-size: 500%;
+    
+    
+}
+
+
+
+.con{
+    cursor: pointer;
+    font-size: 30pt;
+    font-weight: bold;
+    position: relative;
+    font-family: "Fredoka One";
+    transition: all 300ms ease-in-out;
+    color: transparent ;
+    -webkit-text-stroke: 1px white;
+}
+
+.los{
+    cursor: pointer;
+    font-size: 30pt;
+    font-weight: bold;
+    position: relative;
+    font-family: "Fredoka One";
+    transition: all 300ms ease-in-out;
+    color: transparent ;
+    -webkit-text-stroke: 1px white;
+}
+
+.Personajes{
+    cursor: pointer;
+    font-size: 50pt;
+    font-weight: bold;
+    position: relative;
+    font-family: "Fredoka One";
+    transition: all 300ms ease-in-out;
+    color:transparent ;
+    -webkit-text-stroke: 1px white;
+    /*text-shadow: 0 0 20px #ea05cf, 0 0 40px #e80be8, 0 0 30px #b01c9e, 0 0 10px #ea05d7;
+    
+    */
+    background-image: linear-gradient(to left, magenta, red, rgb(27, 228, 161), rgb(75, 202, 36), magenta);
+    background-clip: text;
+    animation: colors 3s linear infinite;
+    background-size: 500%;
+}
+
+
+/*.txt {
+   font-family: sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+    z-index: 99;
+    margin: 130px 0 150px 0 ;
+    padding: 130px;
     -webkit-text-stroke: 2px white;
     -webkit-text-fill-color: transparent;
     
+
+}*/
+
+.menuFooter {
+    margin: 350px 0 0 0;
+    padding: 0;
+    list-style-type: none;
+    
+}
+
+.liCard {
+width: 100px;
+text-decoration: none;
+text-align: center;
+color: white;
+padding: 3px 5px;
+border-right: 1px solid white;
+display: block;
+background-color: rgb(58, 15, 72);
+float: left;
+position: relative;
+z-index: 999;
+cursor: pointer;
 }
 
 
 
+.linkCard {
+   color: white;
+    text-decoration: none;
+    line-height: 1.2em;
+    cursor: pointer;
+}
 
 
+.linkCard:hover {
+   color: chartreuse;
+   font-weight: bold;
+   -webkit-text-stroke: 1px rgb(0, 0, 0);
 
+}
 
+.liCard:Hover{
+    background-color: rgb(134, 24, 171);
+    width: 120px;  
+    
+}
+
+@keyframes colors {
+    from {
+        background-position: 0% 50%;
+    }
+    to {
+        background-position: 100% 50%;
+    }
+}

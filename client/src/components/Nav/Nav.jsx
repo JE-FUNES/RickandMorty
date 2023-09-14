@@ -4,8 +4,24 @@ import styles from './Nav.module.css';
 import CounterCards from '../CounterCards/CounterCards.jsx';
 import {Link} from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
+import {useState} from "react";
 
-const Nav = ({onSearch, counter, logOut}) => {
+const Nav = ({onSearch, counter, logOut, handleCloseAll}) => {
+
+        const [shownIds, setShownIds] = useState([]);
+
+        const handleRandom = () => {
+            let randomId;
+            do {
+                randomId = Math.floor(Math.random() * 826);
+                
+            } while (shownIds.includes(randomId));
+
+            setShownIds([...shownIds, randomId]);
+
+            onSearch(randomId);
+        };
+    
 
     const location = useLocation();
     
@@ -25,23 +41,27 @@ const Nav = ({onSearch, counter, logOut}) => {
                 </li>
                 <li>
                     <Link to="/favorites">
-                        <button className={styles.boton}>Favorits</button>
+                        <button className={styles.boton}>Favorites</button>
                     </Link>
                 </li>
-
-
-
-                
                 <li>
                     <button className={styles.boton} onClick={() => logOut()}>Log Out</button>
                 </li>
+                <li>
+                    <Link to="/carrito">
+                        <button className={styles.boton}>Mi 🛒</button>
+                    </Link>
+                </li>
             </ul>
         </nav>
-        <nav className={styles.nav2}>
+        
+        <nav className={`${styles.nav2} ${location.pathname === "/home" ? styles.nav2Home : ""}`}>
             <ul>
                 <li>
                     <div className={styles.divider}>
+                    {location.pathname === "/home" && (
                     <SearchBar className={styles.searchBar} onSearch={onSearch} />
+                    )}
                     </div>
                 </li>
                 <li> 
@@ -49,7 +69,12 @@ const Nav = ({onSearch, counter, logOut}) => {
                     {location.pathname === "/home" && (
                         <CounterCards  counter={counter} /> 
                     )}
-                        <button className={styles.boton} onClick={() => onSearch(Math.floor(Math.random() * 826 ))}>Random</button>
+                        {location.pathname === "/home" && (
+                        <button className={styles.boton} onClick={handleRandom}>Random</button>
+                        )}
+                        {location.pathname === "/home" && (
+                        <button className={styles.boton} onClick={handleCloseAll}>X all</button>
+                        )}
                         </div>   
                 </li>
             </ul>
@@ -57,6 +82,10 @@ const Nav = ({onSearch, counter, logOut}) => {
     </div>
     );
 };
-            
+
+
+
+                
+       
 
 export default Nav;

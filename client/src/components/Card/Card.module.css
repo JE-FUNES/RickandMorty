@@ -38,8 +38,21 @@
     border-radius: 50%; /* Ajustado */
     align-items: right;
     cursor: pointer;
-    margin: 0 0 0 10px;
+    margin: 0 0 0 20px;
     font-size: 15px;
+}
+
+.carr {
+    background-color: #a645b5;
+    background: transparent;
+    border: none;
+    z-index: 1;
+    position: relative; /* Añadido */
+    border-radius: 50%; /* Ajustado */
+    align-items: right;
+    cursor: pointer;
+    margin: 0 0 0 10px;
+    font-size: 19px;
 }
 
 .cardContainer { 

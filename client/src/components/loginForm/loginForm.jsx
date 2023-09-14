@@ -29,9 +29,9 @@ function LoginForm({login})  {
 
     const [password, setPassword] = useState("");
 
-    const onChangePass = ({currentTarget}) => {
-        setPassword(currentTarget.value);
-    }
+    //const onChangePass = ({currentTarget}) => {
+    //  setPassword(currentTarget.value);
+    //}
 
    /* function handleChange (e){
         setUser({
@@ -103,7 +103,7 @@ function LoginForm({login})  {
                 placeholder="Tu-clave123"                                                                   
                 value={user.password} /*user.password*/ 
                 onChange={handleChange}
-                onChangePass={onChangePass}
+                
                 />
                 {errors.password && <p className={styles.error}>{errors.password}</p>}
                 </div>
