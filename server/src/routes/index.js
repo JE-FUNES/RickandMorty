@@ -18,9 +18,9 @@ const { postCarr, deleteCarr} = require('../controllers/handleCarrito');
 
 router.get('/character/:id', getCharById);
 router.get('/login', login);
-router.post('/fav', postFav);
-router.post('/carr', postCarr);
-router.delete('/fav/:id', deleteFav);
-router.delete('/carr/:id', deleteCarr);
+router.post('/fav', postFav); //en el cliente es addFav
+router.post('/carr', postCarr); // en el cliete es addCarr
+router.delete('/fav/:id', deleteFav); // en el cliente es removeFav
+router.delete('/carr/:id', deleteCarr); // en el cliente es removeCarr
 
 module.exports = router;

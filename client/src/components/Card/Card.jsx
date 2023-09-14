@@ -47,10 +47,10 @@ function Card({id, name, status, species, gender, origin, image, onClose, remove
    function handleFavorite() {
       if (isFav) {
          setIsFav(false);
-         (removeFav(id));
+      (removeFav(id));
       } else {
          setIsFav(true);
-         (addFav({name, status, species, gender, image, origin, id, onClose}));
+      (addFav({name, status, species, gender, image, origin, id, onClose}));
       }
    }
 

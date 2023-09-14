@@ -33,12 +33,15 @@ export default function reducer (state = initialState, action) { // el destructu
             return { ...state, myFavorites: action.payload };
 
         case REMOVE_CARR:
+            return { ...state, miCarrito: action.payload };
+
+            /* prueba
             const updatedMiCarrito = state.miCarrito.filter(
                 (character) => character.id !== action.payload
             );
             console.log("Quito del Carrito", state.miCarrito)
              return { ...state, miCarrito: updatedMiCarrito };    
-
+            */
 
         case FILTER:
             if (action.payload === "all") {
