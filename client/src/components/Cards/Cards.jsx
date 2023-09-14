@@ -3,6 +3,7 @@ import Card from '../Card/Card';
 import styles from './cards.module.css';
 import { Link } from 'react-router-dom';  
 import backgroundImage from "./giphy.gif";
+import Music from '../Music/Music';
 
 
 
@@ -103,9 +104,12 @@ export default function Cards({characters, onClose}) {
                         STICKERS
                         </Link>
                      </li>
+                     <li  className={styles.liCard1}><Music /></li>
                   </ul>
    </div>
+   
    </div>
+   
              );
           }
                   
