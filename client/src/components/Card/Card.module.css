@@ -1,11 +1,11 @@
 
-.cardContainer h2 {
+.cardContainer h1 {
     font-family: 'PT Sans';
     text-shadow: 2px 2px 3px black;
-    font-size: 1rem;
+    font-size: 1.4rem;
     font-weight: 400;
-    margin: 1px;
-    padding: 1px;
+    margin: 0.5px;
+    padding: 0.5px;
     color: #42ea0f;
     z-index: 10;
     cursor: nw-resize; 

@@ -1,5 +1,5 @@
 .carr {
-    margin: 300px 0 0 150px;
+    margin: 150px 0 0 150px;
     position: relative;
     z-index: 1;
     width: 90%;
@@ -11,18 +11,60 @@
 }
 
 .carritoTitle {
-    margin: 0 0 10px 550px;
+    margin: 0 0 10px 400px;
     color: red;
     display: flex; /* Usar flexbox para elementos en línea */
-    align-items: center; /* Alinear elementos verticalmente al centro */
+     /* Alinear elementos verticalmente al centro */
   }
   
 .carritoCount {
     color: chartreuse;
     margin: 0 0 0 10px;
-    align-items: center;
+   
 }
 
 
 
        
+.carritoTotal {
+    margin: 0 0 10px 10px;
+    color: red;
+    display: flex; /* Usar flexbox para elementos en línea */
+     /* Alinear elementos verticalmente al centro */
+}
+
+.carritoSuma {
+    color: chartreuse;
+    margin: 0 0 0 10px;
+    
+}
+
+.carritoBtn {
+    width: 100px;
+
+height: 30px;
+font-size: 1rem;
+background-color: black;
+font-weight: 600;
+color: chartreuse;
+box-shadow: 1px 3px 2px 1px red;
+margin: 0 5px 0 10px;
+}
+
+
+.carritoBtn:hover {
+    color: black;
+    background-color: red;
+    box-shadow: 1px 1px 1px 1px white;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+/* Estilos para ocultar el botón cuando carritoSuma es igual a 0 */
+.hidden-button {
+    display: none; /* Oculta el botón */
+  }
+
+
+  

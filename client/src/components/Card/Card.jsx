@@ -73,13 +73,8 @@ function Card({id, name, status, species, gender, origin, image, onClose, remove
          <button className={styles.fav}  onClick={handleFavorite}>{isFav ? "❤️" : "🤍" } </button>
          <button className={styles.carr}  onClick={handleCarrito}>{isCarr ? "💲" : "🛒" } </button>
          <br></br>
-         <h2 onClick={navigateHandler}> {name}</h2>
-         <h2 onClick={navigateHandler}>Status: {status}</h2>
-         <h2 onClick={navigateHandler}>Species: {species}</h2>
-         <h2 onClick={navigateHandler}>Gender: {gender}</h2>
-         <h2 onClick={navigateHandler}>Origin: {origin.name}</h2>
-         <h2 className={styles.keyId} onClick={navigateHandler}>Key: {id}</h2>
-         <br></br>
+         <h1 onClick={navigateHandler}> {name}</h1>
+         <br></br>        
          <img className={styles.alineadoAbajo} src={image} alt={'Character' } onClick={navigateHandler} />
       </div>
    );
