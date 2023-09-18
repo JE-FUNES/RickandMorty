@@ -21,7 +21,7 @@ server.use(express.json());
 
 //Crea un middleware que agregue el string "/rickandmorty" antes de cada una de tus rutas.
 
-server.use('/rickandmorty', router);
+server.use('/rickandmorty', router); // 
 
 server.listen(PORT, () => {
     console.log("Servidor en puerto: " + PORT);

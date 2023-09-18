@@ -26,6 +26,8 @@ const getCharById = async (req, res) => {
     
     const response = await axios.get(`${URL}${id}`);
 
+  
+  
     if (response.status === 200) {
       const { id, status, name, species, origin, image, gender } = response.data;
       res.json({ id, status, name, species, origin, image, gender });
@@ -36,7 +38,7 @@ const getCharById = async (req, res) => {
   } catch (error) {
     // Capturamos cualquier error que pueda ocurrir durante la petición o el procesamiento de la respuesta.
     // Puedes enviar una respuesta de error adecuada en función del tipo de error que se produzca.
-    res.status(500).send('Not Found');
+    throw res.status(500).send('Not Found');
   }
 
   

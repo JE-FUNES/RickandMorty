@@ -14,7 +14,7 @@ export default function reducer (state = initialState, action) { // el destructu
     switch(action.type) {
 
         case ADD_FAV:
-            console.log("fav", state.myFavorites );
+            
             return {
         ...state,
         myFavorites: action.payload,
@@ -22,7 +22,7 @@ export default function reducer (state = initialState, action) { // el destructu
       }
 
         case ADD_CARR:
-            console.log("Agrego al Carrito", state.miCarrito)
+           
           return {
        ...state,
         miCarrito: action.payload,
@@ -40,7 +40,8 @@ export default function reducer (state = initialState, action) { // el destructu
                 (character) => character.id !== action.payload
             );
             console.log("Quito del Carrito", state.miCarrito)
-             return { ...state, miCarrito: updatedMiCarrito };    
+             return { ...state, miCarrito: updatedMiCarrito };
+             ...    
             */
 
         case FILTER:

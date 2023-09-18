@@ -63,7 +63,7 @@ function Card({id, name, status, species, gender, origin, image, onClose, remove
          dispatch(addCarr({name, status, species, gender, image, origin, id, onClose}));
       }
    }
-   console.log("handleCarrito en Card", handleCarrito);
+   
    return (
       <div className={styles.cardContainer}>
          <br></br>
