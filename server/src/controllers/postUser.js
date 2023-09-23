@@ -1,4 +1,4 @@
-const User = require('../DB_conection');
+const {User} = require('../DB_conection');
 
 /* Crea una función llamada postUser y expórtala. 
 Esta función debe recibir por parámetro los objetos req y res. 
@@ -21,21 +21,35 @@ Una vez realizado responde con el usuario guardado.
 del error.
 */
 
-const postUser = async (req, res) => {
+/*const postUser = async (req, res) => {
     const { email, password } = req.body;
     if (!email || !password) {
-        res.status(400).json({ message: 'Faltan datos' });
+       return res.status(400).json({ message: 'Faltan datos' });
     } else {
         try {
         const user = await User.findOrCreate({
             where: { email },
             defaults: { password },
         });
-        res.status(200).json(user);
+        return res.status(200).json(user);
         } catch (error) {
         res.status(500).json({ message: error.message });
         }
     }
+    };
+    */
+
+    const postUser = async (req, res) => {
+        try {
+            const { email, password } = req.body;
+            if (email && password) {
+                await User.findOrCreate({ where: { email:email, password:password }, defaults: { email, password } });
+                return res.status(200).json('Registrado con exito!')
+            }
+            return res.status(400).json('Faltan datos')
+        } catch (error) {
+            res.status(500).json({ error: error.message })
+        }
     };
 
 module.exports = postUser;

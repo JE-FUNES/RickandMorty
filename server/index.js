@@ -35,7 +35,7 @@ server.use('/rickandmorty', router); //
 server.listen(PORT, async () => {
    try {
        // Sincroniza sequelize con la base de datos antes de iniciar el servidor
-       await conn.sync({ force: true });
+       await conn.sync({ force: false });
        console.log("Servidor en puerto: " + PORT);
    } catch (error) {
        console.error("Error al sincronizar la base de datos:", error);

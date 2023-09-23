@@ -1,6 +1,6 @@
 
 
-const users = require('../models/User');
+const {User} = require('../DB_conection');
 
 /* Crea una función llamada login la cual reciba por parámetro los objetos 
 req y res. No olvides exportarla.
@@ -34,7 +34,7 @@ const login = async (req, res) => {
         res.status(400).json({ message: 'Faltan datos' });
     } else {
         try {
-        const user = await users.findOne({
+        const user = await User.findOne({
             where: { email },
         });
         if (!user) {
@@ -51,5 +51,12 @@ const login = async (req, res) => {
         }
     }
     };
+    
+
+ 
+
+
+
+
 
 module.exports = login;

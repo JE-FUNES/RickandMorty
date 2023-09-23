@@ -1,4 +1,4 @@
-const Favorite = require('../models/favorite');
+const {Favorite} = require('../DB_conection');
 
 /* Crea una función llamada postFav la cual reciba por parámetro los objetos req y res.
 
@@ -18,43 +18,24 @@ de datos y responde con ese arreglo.
 */
 
 const postFav = async (req, res) => {
-    const { 
-        name,
-        origin,
-        status,
-        image,
-        species,
-        gender
-    } = req.body;     
+    const {id, name, origin, status, image, species, gender} = req.body;
 
-    if ( 
-        !name ||
-        !origin ||
-        !status ||
-        !image ||
-        !species ||
-        !gender           
-    ) {
-        res.status(401).json({ message: 'Faltan datos' });
-    } else {
-        try {
-        const favorite = await Favorite.findOrCreate({
-            where: { name },
-            defaults: {
-                origin,
-                status,
-                image,
-                species,
-                name,
-                gender
-            },
-        });
-        res.status(200).json(favorite);
-
-        } catch (error) {
-        res.status(500).json({ message: error.message });
+    try {
+        
+        if (!id || !name || !origin || !status || !image || !species || !gender) {
+            return res.status(401).send('Faltan datos');
         }
 
-}};
+        await Favorite.findOrCreate({where: {id, name, origin, status, image, species, gender}});
+
+        const allFavorites = await Favorite.findAll();
+        return res.status(200).json(allFavorites);
+
+    } catch (error) {
+        res.status(500).json({error: error.message});
+    }
+
+}
+
 
 module.exports = postFav;
