@@ -5,8 +5,7 @@
 
 <h1> Proyecto Integrador Henry: </h1>
 
-<h2> Módulo II </h2>
- <p> Implementamos todo lo aprendido en este módulo: </p>
+<h2> Módulo II: Front End </h2>
  <ul>
   <li>React:
       <ul>
@@ -23,11 +22,22 @@
   <li>CSS </li>
   </ul>
 
-  <h2> Módulo III </h2>
-  <p> Llevamos implementando hasta el momento:</p>
+  <h2> Módulo III: Back End </h2>
   <ul>
   <li>Node.js</li>
   <li>Web Server</li>
+  <li>Express, Routing & Middlewares</li>
+  <li>Async Await</li>
+</ul>
+
+  <h2> Módulo IV: Bases de Datos </h2>
+  <ul>
+  <li>ORM</li>
+  <li>Sequelize</li>
+  <li>Modelos</li>
+  <li>Relaciones</li>
+  <li>Queries, Getters & Setters</li>
+  <li>Hooks</li>
 </ul>
 =======
 #PROYECTO INTEGRADOR MOD. II: RICK AND MORTY
